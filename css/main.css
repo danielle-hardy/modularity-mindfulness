@@ -19,9 +19,87 @@ html {
 
 body {
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
 }
 
 img {
   display: block;
   width: 100%;
 }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  grid-area: header;
+}
+
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  align-items: flex-end;
+  display: flex;
+  padding: 0 1rem;
+}
+
+nav a {
+  text-decoration: underline;
+  color: #3783a3;
+}
+
+.main-grid {
+  display:grid;
+  list-style-type: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "header header header"
+  "col1 col2 col3"
+  "footer footer footer";
+  gap: 1rem;
+}
+
+.main-grid li {
+  background-color: #fff;
+  padding: 1em;
+}
+
+.btn {
+  border: .2rem solid #3783a3;
+  background-color: transparent;
+  padding: .5em 1em .6em;
+  border-radius: .3rem;
+  text-decoration: none;
+  color: #3783a3;
+}
+
+footer {
+  background-color: lightblue;
+  padding: 1em;
+  grid-area: footer;
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  @media only screen and (min-width: 60em) {
+
+    html {
+      font-size: 120%;
+      line-height: 1.5;
+    }
