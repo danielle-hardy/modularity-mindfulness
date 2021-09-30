@@ -90,12 +90,13 @@ li p {
 }
 
 .btn {
+  font-size: 1rem;
   border: .2rem solid #3783a3;
-  background-color: transparent;
+  color: #3783a3;
   padding: .5em 1em .6em;
+  margin: auto;
   border-radius: .3rem;
   text-decoration: none;
-  color: #3783a3;
 }
 
 footer {
@@ -104,9 +105,9 @@ footer {
 }
 
 footer p {
-  text-align: center;
   border-top: .2rem solid #e2e2e2;
   font-size: .8rem;
+  text-align: center;
   padding-top: 1rem;
   margin-bottom: -1rem;
 }
