@@ -30,6 +30,7 @@ body {
 img {
   display: block;
   width: 100%;
+  padding: 1rem;
 }
 
 header {
@@ -37,14 +38,26 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 1rem .5rem;
   grid-area: header;
 }
 
+h1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 1rem;
+  font-size: 2rem;
+}
 
-header nav ul {
+nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  margin-bottom: -1rem;
+  padding-bottom: .2rem;
   display: flex;
 }
 
@@ -57,6 +70,18 @@ nav ul li {
 nav a {
   text-decoration: underline;
   color: #3783a3;
+}
+
+.quote {
+  font-size: 2rem;
+  margin-top: 1rem;
+  border-top: .2rem solid #e2e2e2;
+  border-bottom: .2rem solid #e2e2e2;
+  align-items: center;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1em;
+  padding-top: .5rem;
 }
 
 .main-grid {
@@ -75,6 +100,10 @@ nav a {
   padding: 1em;
 }
 
+li p {
+  font-size: 1rem;
+}
+
 .btn {
   border: .2rem solid #3783a3;
   background-color: transparent;
@@ -85,9 +114,16 @@ nav a {
 }
 
 footer {
-  background-color: lightblue;
   padding: 1em;
   grid-area: footer;
+}
+
+footer p {
+  text-align: center;
+  border-top: .2rem solid #e2e2e2;
+  font-size: .8rem;
+  padding-top: 1rem;
+  margin-bottom: -1rem;
 }
 
 @media only screen and (min-width: 38em) {
@@ -97,9 +133,39 @@ footer {
     line-height: 1.4;
   }
 
+  header {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .quote {
+    padding-left: 8rem;
+    padding-right: 1em;
+    margin-left: -4rem;
+    margin-right: 4rem;
+    align-items: center;
+    align-content: center;
+  }
+
+  h1 {
+    align-items: start;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr
+  }
+
+  footer {
+    margin-top: -1rem;
+  }
+
   @media only screen and (min-width: 60em) {
 
-    html {
-      font-size: 120%;
-      line-height: 1.5;
-    }
+  .quote{
+    padding-right: 10rem;
+    padding-right: 10em;
+  }
+
+  }
