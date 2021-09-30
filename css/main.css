@@ -30,8 +30,13 @@ img {
 header {
   display: flex;
   flex-direction: column;
-  padding: 1rem .5rem;
   align-items: center;
+  padding: 1rem .5rem;
+}
+
+main {
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -47,69 +52,84 @@ h1 span {
   font-size: 1.1rem;
 }
 
+footer p {
+  text-align: center;
+  border-top: .2rem solid #e2e2e2;
+  font-size: .8rem;
+  padding-top: 1rem;
+  margin-bottom: -1rem;
+}
+
+article a {
+  text-decoration: none;
+  color: #3783a3;
+  border: .2rem solid rgba(55, 131, 163, .4);
+  padding: .5em 1em .6em;
+  margin-top: auto;
+  border-radius: .3rem;
+  font-size: 1rem;
+}
+
 nav ul {
+  display: flex;
   list-style-type: none;
   padding: 0;
   margin: 0;
   justify-content: space-between;
   margin-bottom: -1rem;
   padding-bottom: .2rem;
-  display: flex;
 }
 
-nav ul li {
-  align-items: flex-end;
-  display: flex;
-  padding: 0 1rem;
-}
-
-nav a {
-  text-decoration: underline;
-  color: #3783a3;
-}
-
-.quote {
-  font-size: 2rem;
-  margin-top: 1rem;
-  border-top: .2rem solid #e2e2e2;
-  border-bottom: .2rem solid #e2e2e2;
+.intro {
   align-items: center;
   text-align: center;
+  font-size: 2rem;
+  border-top: .2rem solid #e2e2e2;
+  border-bottom: .2rem solid #e2e2e2;
   padding-left: 1rem;
   padding-right: 1em;
   padding-top: .5rem;
+  margin-top: 1rem;
 }
 
-main {
-  align-items: center;
+h2 {
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+h2 span {
+  font-size: 1rem;
+  display: flex;
+}
+
+a {
+  color: #3783a3;
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+main i {
   margin-bottom: 1rem;
 }
 
-li p {
-  font-size: 1rem;
+article {
+  display: grid;
 }
 
-.btn {
-  font-size: 1rem;
-  border: .2rem solid #3783a3;
-  color: #3783a3;
-  padding: .5em 1em .6em;
-  margin: auto;
-  border-radius: .3rem;
-  text-decoration: none;
+article p {
+  margin: 1rem;
 }
 
-footer {
-  padding: 1em;
-  grid-area: footer;
-}
-
-footer p {
-  border-top: .2rem solid #e2e2e2;
-  font-size: .8rem;
+div p {
   text-align: center;
-  padding-top: 1rem;
-  margin-bottom: -1rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+p {
+  font-size: 1rem;
 }
 
 @media only screen and (min-width: 38em) {
@@ -117,9 +137,11 @@ footer p {
   header {
     align-items: center;
     flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -1rem;
   }
 
-  .quote {
+  .intro {
     padding-left: 8rem;
     padding-right: 1em;
     margin-left: -4rem;
@@ -132,21 +154,40 @@ footer p {
     align-items: start;
   }
 
+  div {
+    margin-bottom: 1rem;
+  }
+
   section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr
+    grid-template-rows: 1fr;
+  }
+
+  article {
+    margin-top: -.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  article p {
+    margin-bottom: 1rem;
+  }
+
+  article a {
+    margin-bottom: -1rem;
   }
 
   footer {
     margin-top: -1rem;
   }
 
-  @media only screen and (min-width: 60em) {
+}
 
-  .quote{
+@media only screen and (min-width: 60em) {
+
+  .intro {
     padding-right: 10rem;
     padding-right: 10em;
   }
 
-  }
+}
