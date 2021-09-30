@@ -19,12 +19,6 @@ html {
 
 body {
   margin: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  "header"
-  "main"
-  "footer";
 }
 
 img {
@@ -36,10 +30,8 @@ img {
 header {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem .5rem;
-  grid-area: header;
+  align-items: center;
 }
 
 h1 {
@@ -49,6 +41,10 @@ h1 {
   margin: 0;
   padding: 0 1rem;
   font-size: 2rem;
+}
+
+h1 span {
+  font-size: 1.1rem;
 }
 
 nav ul {
@@ -84,20 +80,9 @@ nav a {
   padding-top: .5rem;
 }
 
-.main-grid {
-  display:grid;
-  list-style-type: none;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-  "header header header"
-  "col1 col2 col3"
-  "footer footer footer";
-  gap: 1rem;
-}
-
-.main-grid li {
-  background-color: #fff;
-  padding: 1em;
+main {
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 li p {
